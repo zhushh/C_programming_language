@@ -16,7 +16,7 @@ void qsort(int v[], int left, int right) {
         return;         /* fewer than two elements */
     swap(v, left, (left + right)/2);    /* move partial elem */
     last = left;                        /* to v[0] */
-    for (i = 0; i < right; ++i) {       /* partition */
+    for (i = left + 1; i <= right; ++i) {       /* partition */
         if (v[i] < v[left])
             swap(v, ++last, i);
     }
